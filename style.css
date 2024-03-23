@@ -1,0 +1,289 @@
+ :root {
+        --button-hover-color: black;
+        --button-hover-background-color: white;
+        --button-hover-border-color: black;
+    }
+
+    @font-face {
+        font-family: "portfolio";
+        src: url("./fonts/AlbertSans-VariableFont_wght.ttf");
+    }
+    body {
+        font-family: "portfolio", serif;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .header img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        align-items: center;
+        margin-left: 30rem;
+        margin-top: 2.5rem;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: #fff;
+        background-color: #303030;
+        height: auto;
+        text-align: center;
+    }
+
+    .header h1 {
+        align-items: center;
+        font-size: 70px;
+    }
+
+    .welcome h2 {
+        flex: 1;
+        font-size: 70px;
+        margin-left: 9rem;
+        line-height: 1;
+        margin-top: 0;
+        height: auto;
+    }
+
+    .welcome p {
+        margin-left: 10rem;
+    }
+
+    .welcome {
+        height: auto;
+    }
+
+    @keyframes dropIn {
+        from {
+            transform: translateY(-500px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes rightDrop {
+        from {
+            transform: translateX(1000px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes back {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(1000px);
+        }
+    }
+    .container {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        border: 10px solid #303030;
+        border-radius: 20px;
+        max-width: 1000px;
+        margin: 2rem auto;
+
+    }
+
+    button {
+        display: inline-block;
+        padding: 0.5em 1.7em;
+        margin-left: 10rem;
+        border: 2px solid black;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #ffffff;
+        background-color: #303030;
+        text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+        text-align: center;
+        margin-top: 2rem;
+        transition: all 0.2s;
+    }
+
+    button:hover {
+        color: var(--button-hover-color);
+        background-color: var(--button-hover-background-color);
+        border: 2px solid var(--button-hover-border-color);
+    }
+
+    ul {
+        margin-top: 7rem;
+    }
+
+    li {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .un-order-list {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        width:300px;
+    }
+
+    .un-order-list a {
+        text-decoration: none;
+        color: black;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.5s;
+    }
+
+    .un-order-list a:hover {
+        border-bottom-color: black;
+    }
+
+    input[type='checkbox'] {
+        appearance: none;
+        background-color: #303030;
+        height: 15px;
+        width: 15px;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        transition: border-color 0.3s;
+    }
+
+    input[type="checkbox"]:checked {
+        border-color: white;
+        background-color: white;
+    }
+
+    input[type="checkbox"]:checked::after {
+        font-size: 20px;
+        color: white;
+        position: absolute;
+    }
+
+    .welcome label {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .social-links {
+        position: relative;
+        display: flex;
+        justify-content: center; /* Center the items horizontally */
+    }
+
+ .social-links img {
+     height: 150px;
+     width: 150px;
+     border-radius: 30px;
+     margin-left: auto;
+     margin-right: auto;
+     transition: 0.5s;
+ }
+
+    .social-links img:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 5px 5px #C4C3C3;
+    }
+    @media  screen and (max-width:700px) {
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            position: relative
+        }
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            color: #fff;
+            background-color: #303030;
+            height: auto;
+            text-align: center;
+        }
+        .header img{
+            height: 50px;
+            width:50px;
+            border-radius:50px;
+            margin-left:1rem;
+            margin-top:1rem;
+        }
+        .header h1{
+            font-size:30px;
+            width:180px;
+        }
+        .container{
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px; /* Reduced gap for smaller screens */
+            border: 10px solid #303030;
+            border-radius: 20px;
+            width:200px;
+            margin:1rem auto;
+        }
+        .welcome h2{
+            flex:1;
+            font-size: 40px;
+            margin-left: 0;
+            line-height: 1;
+            margin-top:0;
+            height: auto;
+        }
+        .welcome p{
+            margin-left:0;
+            font-size:10px;
+            padding:0 20px 0;
+        }
+        .welcome{
+            height:auto;
+        }
+        button{
+            display: inline-block;
+            padding: 0.5em 1.7em;
+            margin-left:1rem;
+            border:2px solid black;
+            border-radius:2rem;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            color: #ffffff;
+            background-color:#303030;
+            text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+            text-align: center;
+            margin-top:0;
+            transition: all 0.2s;
+        }
+        ul{
+            margin-top:15rem;
+        }
+        li{
+            padding:10px;
+            font-size:15px;
+        }
+        .un-order-list{
+            margin-top:0;
+            margin-bottom:1rem;
+        }
+        .un-order-list a{
+            text-decoration:none;
+            color:black;
+            border-bottom:2px solid transparent;
+            transition: border-color 0.5s;
+        }
+        @keyframes rightDrop{
+            from{transform: translateX(500px);}
+            to{transform: translateX(-200px);}
+        }
+        @keyframes back{
+            from{transform: translateX(-200px);}
+            to{transform: translateX(500px);}
+        }
+        .social-links img{
+            height: 50px;
+            width:50px;
+            border-radius: 30px;
+            transition:0.5s;
+        }
+    }
